@@ -12,14 +12,11 @@ import { RoomComponent } from '../components/room/room.component';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav)
-  nav: Nav;
+  @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
   rootPage: any = HomeComponent;
   rooms: Array<String>;
-
-  items: Array<{title: string, component: any}> = [];
 
   constructor(public platform: Platform,
               public menu: MenuController) {
