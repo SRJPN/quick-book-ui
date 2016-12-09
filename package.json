@@ -6,7 +6,7 @@
   "scripts": {
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "start": "http-server -p 8000 ./www/ --cors"
+    "start": "http-server ./www/ --cors"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
