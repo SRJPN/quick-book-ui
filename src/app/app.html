@@ -1,0 +1,20 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Rooms</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <span defaultOverlayTarget></span>
+    <ion-list>
+      <button ion-item *ngFor="let room of rooms" (click)="openPage(room)">
+        {{ room }}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
