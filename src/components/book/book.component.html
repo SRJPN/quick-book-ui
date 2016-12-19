@@ -12,11 +12,11 @@
           </div>
           <div class="form-group">
             <label for="empId">Duration:</label><br/>
-            <button class="durationButton" (click)="setDuration(5)" value="5">5 mins</button>
-            <button class="durationButton" (click)="setDuration(1)" value="10">10 mins</button>
-            <button class="durationButton" (click)="setDuration(1)" value="15">15 mins</button>
-            <button class="durationButton" (click)="setDuration(3)" value="30">30 mins</button>
-            <button class="durationButton" (click)="setDuration(4)" value="45">45 mins</button>
+            <button class="durationButton"
+                    [ngClass]="{greenDuration: isDurationSelected(d),  yellowDuration: !isDurationSelected(d)}"
+                    (click)="setDuration(d)" value="d" *ngFor="let d of durations">
+              {{d}} mins
+            </button>
           </div>
         </div>
         <div class="pull-right">

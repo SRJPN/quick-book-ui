@@ -35,6 +35,15 @@
   margin-left: 5%;
   width: 20%;
   height: 25%;
-  background: #fa3;
   font-size: 150%;
+}
+
+.greenDuration {
+  @extend .durationButton;
+  background: #219161;
+}
+
+.yellowDuration {
+  @extend .durationButton;
+  background: #fa3;
 }

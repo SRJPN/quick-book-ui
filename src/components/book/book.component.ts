@@ -15,6 +15,8 @@ export class BookComponent {
 
   public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
 
+  durations = [5, 10, 15, 30, 45];
+
   beforeDismiss() {
     return true;
   }
@@ -46,6 +48,11 @@ export class BookComponent {
       this.errorMessage = 'some problem in booking';
     });
   }
+
+  isDurationSelected(duration) {
+    return this.duration == duration;
+  }
+
 
   setDuration(selectedDuration) {
     this.duration = selectedDuration;
