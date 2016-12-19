@@ -19,11 +19,22 @@ body, .fitPage {
 }
 
 .middleDiv {
-  position : absolute;
-  width    : 300px;
-  height   : 300px;
-  left     : 50%;
-  top      : 50%;
-  margin-left : -100px; /* half of the width  */
-  margin-top  : -100px; /* half of the height */
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 40%;
+  top: 50%;
+  margin-left: -100px; /* half of the width  */
+  margin-top: -100px; /* half of the height */
+  .time {
+    font-size: 500%;
+  }
+  .creator {
+    font-size: 200%;
+  }
+  .bookButton {
+    margin-top: 5%;
+    width: 50%;
+    height: 25%;
+  }
 }

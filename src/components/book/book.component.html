@@ -11,19 +11,17 @@
             <input class="form-control" type="text" autofocus [(ngModel)]="empId" id="empId">
           </div>
           <div class="form-group">
-            <label for="duration">Duration:</label>
-            <select class="form-control" [(ngModel)]="duration" id="duration">
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="45">45</option>
-            </select>
+            <label for="empId">Duration:</label><br/>
+            <button class="durationButton" (click)="setDuration(5)" value="5">5 mins</button>
+            <button class="durationButton" (click)="setDuration(1)" value="10">10 mins</button>
+            <button class="durationButton" (click)="setDuration(1)" value="15">15 mins</button>
+            <button class="durationButton" (click)="setDuration(3)" value="30">30 mins</button>
+            <button class="durationButton" (click)="setDuration(4)" value="45">45 mins</button>
           </div>
         </div>
         <div class="pull-right">
-          <button class="btn-default" (click)="cancel()">Cancel</button>
-          <button class="btn-primary" (click)="book()">Book</button>
+          <button class="btn-default actionButton cancel" (click)="cancel()">Cancel</button>
+          <button class="btn-primary actionButton book  " (click)="book()">Book</button>
         </div>
       </div>
     </div>

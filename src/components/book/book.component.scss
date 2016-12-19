@@ -5,9 +5,36 @@
 .custom-modal-header {
   background-color: #219161;
   color: #fff;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
   margin-top: -15px;
   margin-bottom: 40px;
+}
+
+.actionButton {
+  margin-top: 70%;
+  margin-left: 5%;
+  width: 40%;
+  height: 25%;
+  font-size: 175%;
+}
+
+.book {
+  @extend .actionButton;
+  background: #219161;
+}
+
+.cancel {
+  @extend .actionButton;
+  background: #f30d0d;
+}
+
+.durationButton {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 20%;
+  height: 25%;
+  background: #fa3;
+  font-size: 150%;
 }

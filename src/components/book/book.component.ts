@@ -47,6 +47,10 @@ export class BookComponent {
     });
   }
 
+  setDuration(selectedDuration) {
+    this.duration = selectedDuration;
+  }
+
   cancel() {
     this.viewCtrl.dismiss();
     // this.dialog.close();
