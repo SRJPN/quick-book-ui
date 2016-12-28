@@ -29,7 +29,7 @@ export class RoomComponent {
       });
     };
 
-    this.room = navParams.get('room');;
+    this.room = navParams.get('room');
     getRoomStatus.call(this);
 
     eventService.onRoomStatusChanged.subscribe((status) => {
@@ -49,7 +49,7 @@ export class RoomComponent {
       });
     };
 
-    this.room = navParams.get('room');;
+    this.room = navParams.get('room');
     getRoomStatus.call(this);
 
     eventService.onRoomStatusChanged.subscribe((status) => {
@@ -115,10 +115,11 @@ export class RoomComponent {
   }
 
   public isBooked() {
-    return this.roomStatus && this.roomStatus.status === 'booked';
+    return !this.isAvailable();
   }
 
   public isQuickBookMeeting() {
+    console.log(this.roomStatus.creator);
     return this.roomStatus && this.roomStatus.creator.indexOf("QuickBook Instant Meeting") !== -1;
   }
 

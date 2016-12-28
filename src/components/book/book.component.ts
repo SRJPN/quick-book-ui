@@ -1,10 +1,9 @@
 import { Component, EventEmitter } from '@angular/core';
 import { ViewController } from 'ionic-angular';
-import { BSModalContext } from 'angular2-modal/plugins/bootstrap/modal-context';
 import { RoomStatusService } from '../services/room-status.service';
 import { EventService } from '../services/event-service.service';
 
-export class RoomContext extends BSModalContext {
+export class RoomContext {
   public roomName: number;
 }
 
@@ -34,15 +33,10 @@ export class BookComponent {
     this.room = viewCtrl.data.roomName;
     console.log(viewCtrl.data.roomName);
   }
-  //
-  // constructor(public dialog: DialogRef<RoomContext>, public roomStatusService: RoomStatusService, public eventService: EventService) {
-  //   console.log("book is loaded");
-  //   this.room = dialog.context.roomName;
-  // }
 
   book() {
-    this.roomStatusService.book(this.room, this.duration, this.empId).subscribe((room) => {
-      this.eventService.onRoomStatusChanged.emit(room.json());
+    this.roomStatusService.book(this.room, this.duration, this.empId).subscribe((updatedRoom) => {
+      this.eventService.onRoomStatusChanged.emit(updatedRoom.json());
       this.viewCtrl.dismiss();
     }, () => {
       this.errorMessage = 'some problem in booking';
@@ -52,7 +46,6 @@ export class BookComponent {
   isDurationSelected(duration) {
     return this.duration == duration;
   }
-
 
   setDuration(selectedDuration) {
     this.duration = selectedDuration;

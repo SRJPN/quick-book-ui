@@ -21770,16 +21770,24 @@ sub {
 }
 
 .book {
-  background: #219161;
+  background: #ffffff;
 }
 
 .cancel {
-  background: #f30d0d;
+  background: #ffffff;
 }
 
 .durationButton, .greenDuration, .yellowDuration {
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 20%;
+  height: 25%;
+  font-size: 150%;
+}
+
+.empIdButton {
+  margin-top: 20%;
+  margin-left: 30%;
   width: 20%;
   height: 25%;
   font-size: 150%;
