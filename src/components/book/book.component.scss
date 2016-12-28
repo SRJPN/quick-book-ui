@@ -13,21 +13,23 @@
 }
 
 .actionButton {
-  margin-top: 70%;
-  margin-left: 5%;
-  width: 40%;
+  margin-top: 50%;
+  margin-left: 15%;
+  width: 30%;
   height: 25%;
-  font-size: 175%;
+  font-size: 120%;
 }
 
 .book {
   @extend .actionButton;
-  background: #ffffff;
+  background: #219161;
+  color: black;
+
 }
 
 .cancel {
   @extend .actionButton;
-  background: #ffffff;
+  background: #f30d0d;
 }
 
 .durationButton {

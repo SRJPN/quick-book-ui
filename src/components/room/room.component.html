@@ -2,12 +2,12 @@
   <div class="fitPage" [ngClass]="{green:isAvailable(), red:isBooked()}">
     <h1 align="center">{{ room }}</h1>
     <div class="middleDiv" align="center" *ngIf="!!roomStatus">
-      <div *ngIf="isQuickBookMeeting() && isBooked()">
-        <button class="btn-primary" (click)="endMeeting()">End Meeting</button>
-      </div>
       <div class="time">{{timer}}</div>
       <div *ngIf="isBooked()" class="creator">{{roomStatus.creator}}</div>
-      <button class="btn-primary bookButton" (click)="book()" *ngIf="isAvailable()">Book</button>
+      <button class="btn btn-large bookButton icon-lock icon-white" (click)="book()" *ngIf="isAvailable()"> Book</button>
+      <div *ngIf="isQuickBookMeeting() && isBooked()">
+        <button class="btn btn-large icon-unlock endButton icon-white" (click)="endMeeting()"> End Meeting</button>
+      </div>
     </div>
   </div>
 </ion-content>

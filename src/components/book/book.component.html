@@ -17,9 +17,9 @@
             </button>
           </div>
         </div>
-        <div class="pull-right">
-          <button class="btn-default actionButton cancel icon-remove" (click)="cancel()"></button>
-          <button class="btn-primary actionButton book icon-lock" (click)="book()"></button>
+        <div class="span12 centered-text">
+          <button class="btn btn-large actionButton icon-remove icon-white cancel" (click)="cancel()"> Cancel</button>
+          <button class="btn btn-large actionButton icon-lock icon-white book " [disabled]="disableButton()" (click)="book()"> Book</button>
         </div>
       </div>
     </div>

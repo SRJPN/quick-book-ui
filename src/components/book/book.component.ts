@@ -51,6 +51,13 @@ export class BookComponent {
     this.duration = selectedDuration;
   }
 
+
+  disableButton() {
+    console.log(this.empId!=null && this.duration!=null);
+    return !(this.empId!=null && this.duration!=null);
+  }
+
+
   cancel() {
     this.viewCtrl.dismiss();
     // this.dialog.close();
