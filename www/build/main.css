@@ -21762,7 +21762,7 @@ sub {
 }
 
 .actionButton, .book, .cancel {
-  margin-top: 50%;
+  margin-top: 25%;
   margin-left: 15%;
   width: 30%;
   height: 25%;
@@ -21772,10 +21772,32 @@ sub {
 .book {
   background: #219161;
   color: black;
+  font-size: 200%;
+  width: 30%;
+  height: 35%;
 }
 
 .cancel {
   background: #f30d0d;
+  font-size: 200%;
+  width: 30%;
+  height: 35%;
+}
+
+.inputBoxStyle {
+  border-color: black;
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding: 16px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  margin-left: 20%;
+  text-align: center;
 }
 
 .durationButton, .greenDuration, .yellowDuration {
@@ -21786,12 +21808,19 @@ sub {
   font-size: 150%;
 }
 
-.empIdButton {
+.duration {
   margin-top: 20%;
-  margin-left: 30%;
+}
+
+.empIdButton {
+  margin-top: 25%;
+  margin-left: 25%;
   width: 20%;
   height: 25%;
-  font-size: 150%;
+  font-size: 170%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 .greenDuration {
@@ -21857,7 +21886,7 @@ body, .fitPage {
 
 .middleDiv .endButton {
   margin-top: 5%;
-  width: 50%;
+  width: 70%;
   height: 25%;
   font-size: 150%;
 }

@@ -53,8 +53,7 @@ export class BookComponent {
 
 
   disableButton() {
-    console.log(this.empId!=null && this.duration!=null);
-    return !(this.empId!=null && this.duration!=null);
+    return !((this.empId!=null && this.empId!="")  && this.duration!=null);
   }
 
 
