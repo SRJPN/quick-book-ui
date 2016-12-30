@@ -14,29 +14,29 @@
 
 .actionButton {
   margin-top: 25%;
-  margin-left: 15%;
-  width: 30%;
-  height: 25%;
+  margin-left: 5%;
+  width: 35%;
+  height: 70%;
   font-size: 120%;
 }
 
 .book {
-  @extend .actionButton;
   background: #219161;
   color: black;
   font-size: 200%;
-  width: 30%;
-  height: 35%;
+  width: 40%;
+  height: 70%;
 }
 
 .cancel {
   @extend .actionButton;
   background: #f30d0d;
   font-size: 200%;
-  width: 30%;
-  height: 35%;
+  width: 40%;
+  height: 70%;
 }
-.inputBoxStyle{
+
+.inputBoxStyle {
   border-color: black;
   background-color: #fff;
   color: #444;
@@ -49,8 +49,9 @@
   border-style: solid;
   font-size: 16px;
   margin-left: 20%;
-text-align: center;
+  text-align: center;
 }
+
 .durationButton {
   margin-top: 10%;
   margin-left: 15%;
@@ -58,13 +59,14 @@ text-align: center;
   height: 50px;
   font-size: 150%;
 }
-.duration{
+
+.duration {
   margin-top: 20%;
 }
 
 .empIdButton {
-  margin-top: 25% ;
-  margin-left: 25% ;
+  margin-top: 25%;
+  margin-left: 25%;
   width: 20%;
   height: 25%;
   font-size: 170%;
@@ -80,7 +82,8 @@ text-align: center;
   @extend .durationButton;
   background: #fa3;
 }
-.button-outline-ios{
+
+.button-outline-ios {
   border-width: 0px;
   color: black;
 }
