@@ -20,29 +20,27 @@ body, .fitPage {
 
 .middleDiv {
   position: absolute;
-  width: 300px;
-  height: 300px;
   left: 40%;
   top: 50%;
-  margin-left: -100px; /* half of the width  */
-  margin-top: -100px; /* half of the height */
+  align-content: center;/* half of the height */
   .time {
-    font-size: 500%;
+    font-size: 1000%;
+    align-content: center;
+    margin-left: -200px; /* half of the width  */
+    margin-top: -100px;
   }
   .creator {
     font-size: 200%;
+    text-align: center;
+    margin-left: -200px;
+    align-content: center;
   }
-  .bookButton {
-    margin-top: 5%;
-    width: 50%;
-    height: 25%;
-    font-size: 150%;
+  .actionButton {
+    margin-top: 50%;
+    margin-left: -210px;
+    width: 450px;
+    height: 90px;
+    font-size: 300%;
+    align-content: center
   }
-  .endButton {
-    margin-top: 5%;
-    width: 70%;
-    height: 25%;
-    font-size: 150%;
-  }
-
 }

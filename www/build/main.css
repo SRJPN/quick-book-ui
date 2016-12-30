@@ -21859,34 +21859,40 @@ body, .fitPage {
 
 .middleDiv {
   position: absolute;
-  width: 300px;
-  height: 300px;
   left: 40%;
   top: 50%;
-  margin-left: -100px;
-  /* half of the width  */
-  margin-top: -100px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
   /* half of the height */
 }
 
 .middleDiv .time {
-  font-size: 500%;
+  font-size: 1000%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-left: -200px;
+  /* half of the width  */
+  margin-top: -100px;
 }
 
 .middleDiv .creator {
   font-size: 200%;
+  text-align: center;
+  margin-left: -200px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
-.middleDiv .bookButton {
-  margin-top: 5%;
-  width: 50%;
-  height: 25%;
-  font-size: 150%;
-}
-
-.middleDiv .endButton {
-  margin-top: 5%;
-  width: 70%;
-  height: 25%;
-  font-size: 150%;
+.middleDiv .actionButton, .middleDiv .book, .middleDiv .cancel {
+  margin-top: 50%;
+  margin-left: -210px;
+  width: 450px;
+  height: 90px;
+  font-size: 300%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }

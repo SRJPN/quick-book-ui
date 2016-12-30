@@ -111,7 +111,7 @@ export class RoomComponent {
     var minutes = parseInt(String(duration.asMinutes())) - hours * 60;
     var seconds = parseInt(String(duration.asSeconds())) - minutes * 60 - hours * 60 * 60;
 
-    this.timer = `${hours}:${this.padZero(minutes)}:${this.padZero(seconds)}`;
+    this.timer = `${this.padZero(hours)}:${this.padZero(minutes)}:${this.padZero(seconds)}`;
   }
 
   public isBooked() {
@@ -119,7 +119,6 @@ export class RoomComponent {
   }
 
   public isQuickBookMeeting() {
-    console.log(this.roomStatus.creator);
     return this.roomStatus && this.roomStatus.creator.indexOf("QuickBook Instant Meeting") !== -1;
   }
 
