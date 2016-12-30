@@ -14,7 +14,7 @@ export class BookComponent {
 
   public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
 
-  durations = [5, 10, 15, 30, 45];
+  durations = [5, 10, 15, 30];
 
   beforeDismiss() {
     return true;

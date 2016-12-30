@@ -53,9 +53,9 @@ text-align: center;
 }
 .durationButton {
   margin-top: 10%;
-  margin-left: 10%;
-  width: 20%;
-  height: 25%;
+  margin-left: 15%;
+  width: 30%;
+  height: 50px;
   font-size: 150%;
 }
 .duration{
@@ -79,4 +79,8 @@ text-align: center;
 .yellowDuration {
   @extend .durationButton;
   background: #fa3;
+}
+.button-outline-ios{
+  border-width: 0px;
+  color: black;
 }

@@ -6,16 +6,15 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="jumbotron">
-          <div class="form-group empIdButton ">
-          <input class="inputBoxStyle" type="text" placeholder="Enter ur employee id" autofocus [(ngModel)]="empId" id="empId">
-          </div>
-
           <div class="form-group duration">
-            <button class="durationButton"
+            <button class="durationButton button-outline-ios"
                     [ngClass]="{greenDuration: isDurationSelected(d),  yellowDuration: !isDurationSelected(d)}"
                     (click)="setDuration(d)" value="d" *ngFor="let d of durations">
               {{d}} mins
             </button>
+          </div>
+          <div class="form-group empIdButton ">
+          <input class="inputBoxStyle" type="text" placeholder="Enter ur employee id" autofocus [(ngModel)]="empId" id="empId">
           </div>
         </div>
         <div class="span12 centered-text">
