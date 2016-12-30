@@ -6,6 +6,7 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="jumbotron">
+          <h1 class="tittle"  align="center">{{ room }}</h1>
           <div class="form-group duration">
             <button class="durationButton button-outline-ios"
                     [ngClass]="{greenDuration: isDurationSelected(d),  yellowDuration: !isDurationSelected(d)}"
@@ -14,7 +15,8 @@
             </button>
           </div>
           <div class="form-group empIdButton ">
-          <input class="inputBoxStyle" type="text" placeholder="Enter ur employee id" autofocus [(ngModel)]="empId" id="empId">
+              <input class="inputBoxStyle" type="text" placeholder="Enter ur employee id" autofocus [(ngModel)]="empId" id="empId">
+
           </div>
         </div>
         <div class="span12 centered-text">
