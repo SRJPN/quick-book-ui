@@ -41,6 +41,7 @@ export class BookComponent {
   }
 
   book() {
+    this.resetErrors();
     this.roomStatusService.book(this.room, this.duration, this.empId).subscribe((updatedRoom) => {
 
       var response = updatedRoom.json();
@@ -54,6 +55,14 @@ export class BookComponent {
     }, () => {
       this.errorMessage = 'some problem in booking';
     });
+  }
+
+  private resetErrors() {
+    this.errorMessage = '';
+    this.errors = {
+      duration: '',
+      employeeId: ''
+    }
   }
 
   isDurationSelected(duration) {
