@@ -102,6 +102,9 @@ export class RoomComponent {
   public isBooked() {
     return !this.isAvailable();
   }
+  public isQuickBookMeeting() {
+  return this.roomStatus.isQuickBookMeeting
+}
 
   public isAvailable() {
     return this.roomStatus && this.roomStatus.status === 'available';

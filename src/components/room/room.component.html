@@ -3,7 +3,8 @@
     <div class="tittle" style="font-size: 100px" align="center">{{ room }}</div>
     <div class="middleDiv" align="center" *ngIf="!!roomStatus">
       <div class="time">{{timer}}</div>
-      <div *ngIf="isBooked()"  class="creator">{{roomStatus.creator}}</div>
+      <div *ngIf="isBooked() && !isQuickBookMeeting()"  class="creator">{{roomStatus.creator}}</div>
+      <div *ngIf="isBooked()"  class="creator">{{roomStatus.summary}}</div>
       <button align="center" class="button-round-ios actionButton ion-ios-lock" (click)="book()" *ngIf="isAvailable()"> Book</button>
       <button align="center" class="button-round-ios ion-ios-unlock actionButton " (click)="endMeeting()"
               *ngIf="roomStatus.isQuickBookMeeting"> End
