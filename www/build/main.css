@@ -21847,6 +21847,14 @@ sub {
   color: black;
 }
 
+.bookinInProgress {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: center;
+  font-size: 150%;
+}
+
 .hello-ionic-page p {
   margin: 20px 0;
   line-height: 22px;
