@@ -25,7 +25,7 @@ export class MyApp {
     // set our app's pages
     this.rooms = ['Taj-Mahal', 'Petra', 'Hampi', 'Palm-Jumeriah', 'Great-Pyramid',
       'Jaisalmer-Fort', 'Three-Gorges', 'Panama-Canal', 'Kansai-Airport', 'Kallanai',
-      'Fatehpur-Sikri', 'Tanjore-Temple', 'Hoover Dam', 'Colosseum', 'Autobahn'];
+      'Fatehpur-Sikri', 'Tanjore-Temple', 'Hoover-Dam', 'Colosseum', 'Autobahn'];
   }
 
   initializeApp() {
