@@ -68,20 +68,6 @@ export class RoomComponent {
 
 
   endMeeting() {
-    // var endMeetingDialog = this.modal.confirm()
-    //   .size('lg')
-    //   .isBlocking(true)
-    //   .showClose(true)
-    //   .keyboard(27)
-    //   .title('End Meeting')
-    //   .body('Do you want to end this meeting?')
-    //   .okBtn('Yes')
-    //   .cancelBtn('No')
-    //   .open();
-    //
-    // endMeetingDialog.then((dialogRef) => {
-    //   dialogRef.result.then(() => this.endCurrentMeeting(), () => {});
-    // })
     this.endCurrentMeeting();
   }
 
