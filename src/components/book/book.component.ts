@@ -49,6 +49,7 @@ export class BookComponent {
       if (response.isValid) {
         this.eventService.onRoomStatusChanged.emit(response);
         this.viewCtrl.dismiss();
+        this.bookingCanBeProcessed = false;
       }
       else {
         this.errors = response.errors;
