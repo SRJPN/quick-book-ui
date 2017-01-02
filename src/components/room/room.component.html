@@ -6,7 +6,7 @@
       <div *ngIf="isBooked()"  class="creator">{{roomStatus.creator}}</div>
       <button align="center" class="button-round-ios actionButton ion-ios-lock" (click)="book()" *ngIf="isAvailable()"> Book</button>
       <button align="center" class="button-round-ios ion-ios-unlock actionButton " (click)="endMeeting()"
-              *ngIf="isQuickBookMeeting() "> End
+              *ngIf="roomStatus.isQuickBookMeeting"> End
       </button>
     </div>
   </div>

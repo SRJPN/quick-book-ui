@@ -14,7 +14,7 @@ import { NavParams } from 'ionic-angular/index';
 export class RoomComponent {
 
   public room = '';
-  roomStatus: any;
+  public roomStatus: any;
   timer: string;
 
   constructor(private roomStatusService: RoomStatusService, public navParams: NavParams,
@@ -62,7 +62,6 @@ export class RoomComponent {
   }
 
   public book() {
-    console.log("book button clicked");
     let profileModal = this.modalCtrl.create(BookComponent, {roomName: this.room, timeLeft:this.timer});
     profileModal.present();
   }
@@ -116,10 +115,6 @@ export class RoomComponent {
 
   public isBooked() {
     return !this.isAvailable();
-  }
-
-  public isQuickBookMeeting() {
-    return this.roomStatus && this.roomStatus.creator.indexOf("QuickBook Instant Meeting") !== -1;
   }
 
   public isAvailable() {
