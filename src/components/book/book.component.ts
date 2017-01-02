@@ -15,6 +15,7 @@ export class BookComponent {
   public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
 
   durations = [5, 10, 15, 30];
+  private bookingCanBeProcessed = true;
 
   beforeDismiss() {
     return true;
@@ -55,6 +56,7 @@ export class BookComponent {
     }, () => {
       this.errorMessage = 'some problem in booking';
     });
+    this.bookingCanBeProcessed = false;
   }
 
   private resetErrors() {
@@ -75,7 +77,7 @@ export class BookComponent {
 
 
   disableButton() {
-    return !((this.empId != null && this.empId != "") && this.duration != null);
+    return !((this.empId != null && this.empId != "") && this.duration != null && this.bookingCanBeProcessed);
   }
 
   disableDurationButton(buttonValue) {
