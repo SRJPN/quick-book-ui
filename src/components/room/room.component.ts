@@ -63,7 +63,7 @@ export class RoomComponent {
 
   public book() {
     console.log("book button clicked");
-    let profileModal = this.modalCtrl.create(BookComponent, {roomName: this.room});
+    let profileModal = this.modalCtrl.create(BookComponent, {roomName: this.room, timeLeft:this.timer});
     profileModal.present();
   }
 

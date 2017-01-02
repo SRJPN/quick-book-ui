@@ -28,10 +28,13 @@ export class BookComponent {
   public room;
   public empId;
   public errorMessage;
+  public timer;
   public errors = {};
 
   constructor(public roomStatusService: RoomStatusService, public eventService: EventService, public viewCtrl: ViewController) {
     this.room = viewCtrl.data.roomName;
+    this.timer = viewCtrl.data.timeLeft;
+    console.log(viewCtrl.data.roomName);
   }
 
   book() {
@@ -43,6 +46,7 @@ export class BookComponent {
         this.viewCtrl.dismiss();
       }
       else {
+        this.errorMessage = response.errors.duration + "" + response.errors.employeeId;
         this.errors = response.errors;
       }
     }, () => {
@@ -63,6 +67,12 @@ export class BookComponent {
     return !((this.empId != null && this.empId != "") && this.duration != null);
   }
 
+  disableDurationButton(buttonValue) {
+    var secMinHrSplit = this.timer.split(':');
+    var hrs = secMinHrSplit[0];
+    var min = secMinHrSplit[1];
+    return (hrs == 0 && buttonValue > min);
+  }
 
   cancel() {
     this.viewCtrl.dismiss();
