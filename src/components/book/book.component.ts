@@ -1,7 +1,7 @@
-import { Component, EventEmitter } from '@angular/core';
-import { ViewController } from 'ionic-angular';
-import { RoomStatusService } from '../services/room-status.service';
-import { EventService } from '../services/event-service.service';
+import {Component, EventEmitter} from "@angular/core";
+import {ViewController} from "ionic-angular";
+import {RoomStatusService} from "../services/room-status.service";
+import {EventService} from "../services/event-service.service";
 
 export class RoomContext {
   public roomName: number;
@@ -36,8 +36,15 @@ export class BookComponent {
 
   book() {
     this.roomStatusService.book(this.room, this.duration, this.empId).subscribe((updatedRoom) => {
-      this.eventService.onRoomStatusChanged.emit(updatedRoom.json());
-      this.viewCtrl.dismiss();
+
+      var response = updatedRoom.json();
+      if (response.isValid) {
+        this.eventService.onRoomStatusChanged.emit(response);
+        this.viewCtrl.dismiss();
+      }
+      else {
+        this.errorMessage = response.errors.duration +""+response.errors.employeeId;
+      }
     }, () => {
       this.errorMessage = 'some problem in booking';
     });
@@ -53,7 +60,7 @@ export class BookComponent {
 
 
   disableButton() {
-    return !((this.empId!=null && this.empId!="")  && this.duration!=null);
+    return !((this.empId != null && this.empId != "") && this.duration != null);
   }
 
 
