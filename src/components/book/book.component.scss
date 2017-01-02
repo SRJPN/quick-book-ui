@@ -73,6 +73,14 @@
   align-content: center;
 }
 
+.error-message {
+  color: red;
+  font-size: 170%;
+  margin-left: 25%;
+  margin-top: 3%;
+  align-content: center;
+}
+
 .greenDuration {
   @extend .durationButton;
   background: #219161;

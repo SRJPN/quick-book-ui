@@ -28,10 +28,10 @@ export class BookComponent {
   public room;
   public empId;
   public errorMessage;
+  public errors = {};
 
   constructor(public roomStatusService: RoomStatusService, public eventService: EventService, public viewCtrl: ViewController) {
     this.room = viewCtrl.data.roomName;
-    console.log(viewCtrl.data.roomName);
   }
 
   book() {
@@ -43,7 +43,7 @@ export class BookComponent {
         this.viewCtrl.dismiss();
       }
       else {
-        this.errorMessage = response.errors.duration +""+response.errors.employeeId;
+        this.errors = response.errors;
       }
     }, () => {
       this.errorMessage = 'some problem in booking';
