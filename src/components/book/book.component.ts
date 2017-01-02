@@ -29,7 +29,10 @@ export class BookComponent {
   public empId;
   public errorMessage;
   public timer;
-  public errors = {};
+  public errors = {
+    duration: '',
+    employeeId: ''
+  };
 
   constructor(public roomStatusService: RoomStatusService, public eventService: EventService, public viewCtrl: ViewController) {
     this.room = viewCtrl.data.roomName;
