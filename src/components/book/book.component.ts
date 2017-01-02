@@ -46,7 +46,6 @@ export class BookComponent {
         this.viewCtrl.dismiss();
       }
       else {
-        this.errorMessage = response.errors.duration + "" + response.errors.employeeId;
         this.errors = response.errors;
       }
     }, () => {
