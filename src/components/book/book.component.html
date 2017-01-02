@@ -1,7 +1,7 @@
 <ion-content>
   <div class="container-fluid custom-modal-container">
     <div *ngIf="errorMessage">
-      <div class="error-message">{{ errorMessage }}</div>
+
     </div>
     <div class="row">
       <div class="col-xs-12">
@@ -19,7 +19,8 @@
             <input class="inputBoxStyle" type="text" placeholder="Enter ur employee id" autofocus [(ngModel)]="empId"
                    id="empId">
           </div>
-          <div class="error-message">{{ errors.employeeId}}</div>
+          <div class="error-message" >{{ errors.employeeId}}</div>
+          <div class="error-message">{{ errorMessage }}</div>
         </div>
         <div class="span12 centered-text">
           <button class="button-round-ios actionButton ion-ios-close cancel" (click)="cancel()"> Cancel</button>
