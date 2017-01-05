@@ -1,7 +1,7 @@
   import { ModalController } from 'ionic-angular';
 import { BookComponent } from '../book/book.component';
 import { Component } from '@angular/core';
-import { RoomStatusService } from '../services/room-status.service';
+import { RoomService } from '../services/room.service';
 import { EventService } from '../services/event-service.service';
 import * as moment from 'moment/moment';
 import * as schedule from 'node-schedule';
@@ -17,7 +17,7 @@ export class RoomComponent {
   public roomStatus: any;
   timer: string;
 
-  constructor(private roomStatusService: RoomStatusService, public navParams: NavParams,
+  constructor(private roomStatusService: RoomService, public navParams: NavParams,
               public modalCtrl: ModalController, private eventService: EventService) {
     var getRoomStatus = function () {
       roomStatusService.getRoomStatus(this.room).subscribe((status) => {

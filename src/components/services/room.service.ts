@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import * as fmt from 'simple-fmt';
 
 @Injectable()
-export class RoomStatusService {
+export class RoomService {
 
   private baseUrl: string = "https://tw-quick-book.herokuapp.com";
   private roomStatus: string = this.baseUrl + '/{0}/status';
@@ -16,6 +16,9 @@ export class RoomStatusService {
 
   getRoomStatus(room) {
     return this.http.get(fmt.fmt(this.roomStatus, room)).map(response => response.json());
+  }
+  getRooms(roomName) {
+    return this.http.get(roomName).map(response => response.json());
   }
 
   book(room: string, duration: number, empId: number) {
