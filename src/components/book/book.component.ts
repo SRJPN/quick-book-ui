@@ -15,7 +15,7 @@ export class BookComponent {
   public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
 
   durations = [5, 10, 15, 30];
-  public bookingCanBeProcessed = true;
+  private bookingCanBeProcessed = true;
 
   beforeDismiss() {
     return true;
@@ -91,8 +91,5 @@ export class BookComponent {
   cancel() {
     this.viewCtrl.dismiss();
     // this.dialog.close();
-  }
-  isBookingInProgress(){
-    return !this.bookingCanBeProcessed
   }
 }
