@@ -9,22 +9,10 @@
 
 <ion-content padding>
 
-  <h1>Welcome to quick book app!</h1>
-  <div >
-    <p>
-      <select (change)="getRooms($event.target.value)">
-        <option *ngFor="let office of offices" [value]="office">{{office}}</option>
-      </select>
-      <button ion-button color="primary" menuToggle>Rooms</button>
-    </p>
-  </div>
+  <h3>Welcome to quick book app!</h3>
 
-  <div>
-    <ion-list>
-      <button ion-item *ngFor="let room of rooms" (click)="openPage(room)">
-        {{ room }}
-      </button>
-    </ion-list>
-  </div>
+  <p>
+    <button ion-button color="primary" menuToggle>Rooms</button>
+  </p>
 
 </ion-content>

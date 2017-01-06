@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
-import { MyApp } from '../components/home/home.component';
+import { MyApp } from './app.component';
 import { RoomComponent } from '../components/room/room.component';
 import { BookComponent } from '../components/book/book.component';
 import { EventService } from '../components/services/event-service.service';
-import { RoomService } from '../components/services/room.service';
+import { RoomStatusService } from '../components/services/room-status.service';
+import { HomeComponent } from '../components/home/home.component';
 
 @NgModule({
   declarations: [
     MyApp,
+    HomeComponent,
     RoomComponent,
     BookComponent
   ],
@@ -19,8 +21,9 @@ import { RoomService } from '../components/services/room.service';
   entryComponents: [
     MyApp,
     RoomComponent,
+    HomeComponent,
     BookComponent
   ],
-  providers: [RoomService, EventService]
+  providers: [RoomStatusService, EventService]
 })
 export class AppModule {}
