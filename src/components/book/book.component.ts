@@ -12,8 +12,6 @@ export class RoomContext {
 })
 export class BookComponent {
 
-  public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
-
   durations = [5, 10, 15, 30];
   public bookingCanBeProcessed = true;
 

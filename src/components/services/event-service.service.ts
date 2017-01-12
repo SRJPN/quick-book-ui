@@ -4,4 +4,5 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class EventService {
 
     public onRoomStatusChanged: EventEmitter<any> = new EventEmitter<any>();
+    public onRoomChanged: EventEmitter<any> = new EventEmitter<any>();
 }

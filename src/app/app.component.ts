@@ -7,6 +7,7 @@ import { StatusBar } from 'ionic-native';
 import { HomeComponent } from '../components/home/home.component';
 import { RoomComponent } from '../components/room/room.component';
 import { RoomService } from '../components/services/room.service';
+import { EventService } from '../components/services/event-service.service';
 
 
 @Component({
@@ -18,16 +19,19 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage: any = HomeComponent;
-  rooms: Array<String>;
+  rooms: Array<String> = [];
 
-  constructor(public platform: Platform,
+  constructor(public platform: Platform, public eventService: EventService,
               public menu: MenuController, public roomService: RoomService) {
     this.initializeApp();
 
     // set our app's pages
-    this.roomService.getRooms("chennai").subscribe((rooms) => {
-      this.rooms = rooms;
-    });
+
+    this.eventService.onRoomChanged.subscribe((data) => {
+      this.roomService.getRooms(data).subscribe((rooms) => {
+        this.rooms = rooms;
+      });
+    })
   }
 
   initializeApp() {
