@@ -1,6 +1,6 @@
 import {Component, EventEmitter} from "@angular/core";
 import {ViewController} from "ionic-angular";
-import {RoomStatusService} from "../services/room.service";
+import {RoomService} from "../services/room.service";
 import {EventService} from "../services/event-service.service";
 
 export class RoomContext {
@@ -35,7 +35,7 @@ export class BookComponent {
     employeeId: ''
   };
 
-  constructor(public roomStatusService: RoomStatusService, public eventService: EventService, public viewCtrl: ViewController) {
+  constructor(public roomStatusService: RoomService, public eventService: EventService, public viewCtrl: ViewController) {
     this.room = viewCtrl.data.roomName;
     this.timer = viewCtrl.data.timeLeft;
     console.log(viewCtrl.data.roomName);

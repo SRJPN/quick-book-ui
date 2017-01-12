@@ -6,26 +6,28 @@ import { StatusBar } from 'ionic-native';
 
 import { HomeComponent } from '../components/home/home.component';
 import { RoomComponent } from '../components/room/room.component';
+import { RoomService } from '../components/services/room.service';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav)
+  nav: Nav;
 
   // make HelloIonicPage the root (or first) page
   rootPage: any = HomeComponent;
   rooms: Array<String>;
 
   constructor(public platform: Platform,
-              public menu: MenuController) {
+              public menu: MenuController, public roomService: RoomService) {
     this.initializeApp();
 
     // set our app's pages
-    this.rooms = ['Taj-Mahal', 'Petra', 'Hampi', 'Palm-Jumeriah', 'Great-Pyramid',
-      'Jaisalmer-Fort', 'Three-Gorges', 'Panama-Canal', 'Kansai-Airport', 'Kallanai',
-      'Fatehpur-Sikri', 'Tanjore-Temple', 'Hoover-Dam', 'Colosseum', 'Autobahn'];
+    this.roomService.getRooms("chennai").subscribe((rooms) => {
+      this.rooms = rooms;
+    });
   }
 
   initializeApp() {
