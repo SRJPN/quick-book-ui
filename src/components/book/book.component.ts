@@ -1,6 +1,6 @@
 import {Component, EventEmitter} from "@angular/core";
 import {ViewController} from "ionic-angular";
-import {RoomStatusService} from "../services/room-status.service";
+import {RoomStatusService} from "../services/room.service";
 import {EventService} from "../services/event-service.service";
 
 export class RoomContext {

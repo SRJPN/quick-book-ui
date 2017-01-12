@@ -1,7 +1,7 @@
   import { ModalController } from 'ionic-angular';
 import { BookComponent } from '../book/book.component';
 import { Component } from '@angular/core';
-import { RoomStatusService } from '../services/room-status.service';
+import { RoomStatusService } from '../services/room.service.ts';
 import { EventService } from '../services/event-service.service';
 import * as moment from 'moment/moment';
 import * as schedule from 'node-schedule';
