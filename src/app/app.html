@@ -10,7 +10,7 @@
     <span defaultOverlayTarget></span>
     <ion-list>
       <button ion-item *ngFor="let room of rooms" (click)="openPage(room)">
-        {{ room }}
+        {{ room.name }}
       </button>
     </ion-list>
   </ion-content>

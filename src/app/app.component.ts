@@ -19,20 +19,14 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage: any = HomeComponent;
-  rooms: Array<String> = [];
 
   constructor(public platform: Platform, public eventService: EventService,
-              public menu: MenuController, public roomService: RoomService) {
+    public menu: MenuController, public roomService: RoomService) {
     this.initializeApp();
 
-    // set our app's pages
-
-    this.eventService.onRoomChanged.subscribe((data) => {
-      this.roomService.getRooms(data).subscribe((rooms) => {
-        this.rooms = rooms;
-      });
-    })
+    this.eventService.onRoomChanged.subscribe((room) => this.openPage(room))
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -43,7 +37,6 @@ export class MyApp {
   }
 
   openPage(room) {
-    this.menu.close();
-    this.nav.setRoot(RoomComponent, {room: room});
+    this.nav.setRoot(RoomComponent, { room: room });
   }
 }

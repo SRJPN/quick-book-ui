@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class OfficeService {
 
-  private baseUrl: string = "https://tw-quick-book.herokuapp.com";
+  private baseUrl: string = "http://localhost:3000";
   private offices: string = this.baseUrl + '/offices';
 
   constructor(private http: Http) {

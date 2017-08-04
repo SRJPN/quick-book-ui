@@ -11,10 +11,16 @@
 
   <h3>Welcome to quick book app!</h3>
   <p>
-    <button ion-button (click)="onOfficeClicked(office)" *ngFor="let office of offices" color="primary"
-            menuToggle>
+    <button ion-button (click)="onOfficeClicked(office)" *ngFor="let office of offices" color="primary">
       {{office}}
     </button>
   </p>
+
+  <span defaultOverlayTarget></span>
+  <ion-list>
+    <button ion-item *ngFor="let room of rooms" (click)="onRoomSelected(room)">
+      {{ room.name }}
+    </button>
+  </ion-list>
 
 </ion-content>

@@ -6,7 +6,7 @@ import * as fmt from 'simple-fmt';
 @Injectable()
 export class RoomService {
 
-  private baseUrl: string = "https://tw-quick-book.herokuapp.com";
+  private baseUrl: string = "http://localhost:3000";
   private roomStatus: string = this.baseUrl + '/{0}/status';
   private rooms: string = this.baseUrl + '/{0}/rooms';
   private bookUrl: string = this.baseUrl + '/book';
@@ -20,7 +20,7 @@ export class RoomService {
   }
 
   getRooms(office) {
-    return this.http.get(fmt.fmt(this.rooms, office)).map(response => response.json());
+    return this.http.get(fmt.fmt(this.rooms, office.toString())).map(response => response.json());
   }
 
   book(room: string, duration: number, empId: number) {
